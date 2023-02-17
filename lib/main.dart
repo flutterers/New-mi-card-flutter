@@ -1,4 +1,7 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 void main() {
   runApp(const MyApp());
@@ -43,10 +46,10 @@ class MyApp extends StatelessWidget {
                   const Text(
                     "Cute Dino Passing By",
                     style: TextStyle(
-                      fontWeight: FontWeight.w200,
+                      fontWeight: FontWeight.w300,
                       fontSize: 25.0,
                       color: Colors.white,
-                      // fontFamily: 'Pacifico',
+                      fontFamily: 'SourceSansPro',
                     ),
                   ),
                 ],
