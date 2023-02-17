@@ -12,39 +12,52 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-          backgroundColor: Colors.teal,
-          body: SafeArea(
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Container(
-                  color: Colors.red,
-                  width: 100.0,
-                ),
-                Container(
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Container(
-                        color: Colors.yellow,
-                        width: 100.0,
-                        height: 100.0,
-                      ),
-                      Container(
-                        color: Colors.green,
-                        width: 100.0,
-                        height: 100.0,
-                      ),
-                    ],
+        backgroundColor: Colors.teal,
+        body: SafeArea(
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Container(
+                width: 50,
+              ),
+              Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Container(
+                    margin: const EdgeInsets.fromLTRB(50.0, 0.0, 50.0, 10.0),
+                    child: const CircleAvatar(
+                      radius: 80.0,
+                      backgroundColor: Colors.yellow,
+                      foregroundImage: AssetImage("images/cute-dino.jpg"),
+                    ),
                   ),
-                ),
-                Container(
-                  color: Colors.blue,
-                  width: 100.0,
-                ),
-              ],
-            ),
-          )),
+                  const Text(
+                    "Cu Dinosaur",
+                    style: TextStyle(
+                      fontWeight: FontWeight.w300,
+                      fontSize: 35.0,
+                      color: Colors.white,
+                      fontFamily: 'Pacifico',
+                    ),
+                  ),
+                  const Text(
+                    "Cute Dino Passing By",
+                    style: TextStyle(
+                      fontWeight: FontWeight.w200,
+                      fontSize: 25.0,
+                      color: Colors.white,
+                      // fontFamily: 'Pacifico',
+                    ),
+                  ),
+                ],
+              ),
+              Container(
+                width: 50,
+              ),
+            ],
+          ),
+        ),
+      ),
     );
   }
 }
